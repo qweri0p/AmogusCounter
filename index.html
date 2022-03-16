@@ -2,15 +2,46 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8"/>
-    <link rel="icon" href="assets/sus.3f692199.png"/>
+    <link rel="icon" href="./assets/sus.3f692199.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Amogus Counter</title>
-    <script type="module" crossorigin src="assets/index.789d94bf.js"></script>
-    <link rel="modulepreload" href="assets/vendor.4422493e.js">
-    <link rel="stylesheet" href="assets/index.2b98a2e5.css">
+    <script>
+      function resetCounter() {
+        if (confirm('Are you sure you want to reset the counter?')) {
+          localStorage.setItem('sussus', 0);
+          location.reload();
+        }
+      }
+      function setCounter() {
+        let amount = prompt("How many sus do you want?", "");
+        if (Number.isInteger(parseInt(amount))) {
+          localStorage.setItem('sussus', amount);
+          location.reload();
+        } else if (amount == null) {
+          return;
+        } else {
+          alert("That's not sus!");
+        }
+      }
+    </script>
+    <script type="module" crossorigin src="./assets/index.c54604aa.js"></script>
+    <link rel="modulepreload" href="./assets/vendor.4422493e.js">
+    <link rel="stylesheet" href="./assets/index.00691625.css">
   </head>
   <body>
     <canvas id='c'></canvas>
+    <main>
+      <h1>Amogus Counter</h1>
+      <p>
+        <button onclick="setCounter()">Set</button>
+        <br>
+        <button onclick="resetCounter()">Reset</button>
+      </p>
+      <span id="counter">0</span> 
+      <button id="help" onclick="alert('Use the spacebar to add one amogus.\nRotate the amogi with left mouse.\nZoom in and out with the scrollbar.')">?</button>   
+      <br>
+      <a href="https://sugoma.xyz">Return to SUGOMA</a>
+    </main>
     
   </body>
 </html>
