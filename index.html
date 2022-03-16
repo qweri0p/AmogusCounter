@@ -2,12 +2,43 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8"/>
-    <link rel="icon" href="sus.png"/>
+    <link rel="icon" href="./sus.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Amogus Counter</title>
+    <script>
+      function resetCounter() {
+        if (confirm('Are you sure you want to reset the counter?')) {
+          localStorage.setItem('sussus', 0);
+          location.reload();
+        }
+      }
+      function setCounter() {
+        let amount = prompt("How many sus do you want?", "");
+        if (Number.isInteger(parseInt(amount))) {
+          localStorage.setItem('sussus', amount);
+          location.reload();
+        } else if (amount == null) {
+          return;
+        } else {
+          alert("That's not sus!");
+        }
+      }
+    </script>
   </head>
   <body>
     <canvas id='c'></canvas>
-    <script type="module" src="/main.js"></script>
+    <main>
+      <h1>Amogus Counter</h1>
+      <p>
+        <button onclick="setCounter()">Set</button>
+        <br>
+        <button onclick="resetCounter()">Reset</button>
+      </p>
+      <span id="counter">0</span> 
+      <button id="help" onclick="alert('Use the spacebar to add one amogus.\nRotate the amogi with left mouse.\nZoom in and out with the scrollbar.')">?</button>   
+      <br>
+      <a href="https://sugoma.xyz">Return to SUGOMA</a>
+    </main>
+    <script type="module" src="./main.js"></script>
   </body>
 </html>

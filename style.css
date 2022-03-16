@@ -1,3 +1,7 @@
+@font-face {
+    font-family: sus;
+    src: url(./font.ttf);
+}
 canvas {
     position: fixed;
     top: 0;
@@ -8,4 +12,54 @@ body {
     top: 0;
     left: 0;
     position: absolute;
+    font-family: sus;
+    display: unset;
+}
+main{
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+}
+a:hover {
+    text-decoration: dashed underline;
+}
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+#counter {
+    font-size: 1000%;
+}
+
+button {
+    display: inline-block;
+    background-color: #07020e;
+    border-radius: 10px;
+    border: 4px single #ffffff;
+    color: #ffffff;
+    text-align: center;
+    font-family: sus;
+    font-size: 30px;
+    padding: 10px;
+    width: 60px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+button:hover {
+    background-color: #131111;
+    transform: scale(1.1);
+}
+#help {
+    background-color: black;
+    border: #131111;
+    font-size: 50px;
 }
