@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8"/>
-    <link rel="icon" href="./sus.png"/>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="./src/sus.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Amogus Counter</title>
     <script>
@@ -23,6 +23,9 @@
           alert("That's not sus!");
         }
       }
+      function help() {
+        alert('Use the spacebar to add one amogus.\nRotate the amogi with left mouse.\nZoom in and out with the scrollbar.')
+      }
     </script>
   </head>
   <body>
@@ -35,10 +38,10 @@
         <button onclick="resetCounter()">Reset</button>
       </p>
       <span id="counter">0</span> 
-      <button id="help" onclick="alert('Use the spacebar to add one amogus.\nRotate the amogi with left mouse.\nZoom in and out with the scrollbar.')">?</button>   
+      <button id="help" onclick="help()">?</button>   
       <br>
       <a href="https://sugoma.xyz">Return to SUGOMA</a>
     </main>
-    <script type="module" src="./main.js"></script>
+    <script type="module" src="./src/main.ts"></script>
   </body>
 </html>

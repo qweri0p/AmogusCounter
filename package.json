@@ -4,15 +4,16 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsc && vite build",
     "preview": "vite preview",
     "host": "vite --host",
-    "deploy": "vite build && gh-pages -d dist",
+    "deploy": "tsc && vite build && gh-pages -d dist",
     "upload": "gh-pages -d dist"
   },
   "devDependencies": {
     "@types/three": "^0.138.0",
     "gh-pages": "^3.2.3",
+    "typescript": "^4.5.4",
     "vite": "^2.8.0"
   },
   "dependencies": {
